@@ -1,9 +1,9 @@
 theme: jekyll-theme-minimal
 title: Security and Microservices
 description: Get started with security for your Java Microservices application
-show_downloads: False
+show_downloads: True
 navigation:
   - title: Home
     url: /
-  - title: Pre-Work
+  - title: Setup the Kubernetes environment
     url: workshop/prework
