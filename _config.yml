@@ -1,9 +1,9 @@
 theme: jekyll-theme-minimal
-title: GitHub pages template
-description: A simple template based on minimal jekyll theme
-show_downloads: True
+title: Security and Microservices
+description: Get started with security for your Java Microservices application
+show_downloads: False
 navigation:
   - title: Home
     url: /
-  - title: Setup
-    url: setup
+  - title: Pre-Work
+    url: workshop/prework
