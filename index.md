@@ -68,7 +68,9 @@ These are the sections of this workshop, go through all of them in sequence:
 * [7 - Istio Authorization](workshop/03-p-sec-exercise/03-README.md)
 * [8 - Authentication in the Vue.js fronted](workshop/04-app-sec-exercise/APPLICATION_AUTHENTICATION.md)
 * [9 - Authorization in Quarkus application](workshop/04-app-sec-exercise/APPLICATION_AUTHORIZATION.md)
-* [10 - Setup the web-application and Microservices locally](workshop/04-app-sec-exercise/README.md)
+
+The last section shows how to compile and run the application locally:
+* [Setup the web-application and Microservices locally](workshop/04-app-sec-exercise/local.md)
 
 
 ### Compatibility
