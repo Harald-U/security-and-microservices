@@ -13,9 +13,9 @@ cd security-and-microservices/deployments/
 
 ### Step 2: Start a Minikube "cluster"
 
-In this workshop we will use Minikube in a somewhat minimal configuration with 2 CPUs and 4 GB om memory. 
+In this workshop we will use Minikube in a somewhat minimal configuration with 2 CPUs and 4 GB of memory. 
 
-The Docker driver allows you to install Kubernetes into an existing Docker install. On Linux, this does not require any virtualization to be enabled, on macOS this is using the Docker Desktop virtualization environment (HyperKit). 
+The Docker driver allows you to install Kubernetes into an existing Docker install. On Linux, this does not require any virtualization at all, on macOS this is using the virtualization of Docker Desktop (HyperKit). 
 
 ```
 minikube start --cpus 2 --memory 4096 --driver=docker
@@ -39,7 +39,7 @@ Output:
 🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 ```
 
-Initial start will take long because it downloads the Kubernetes image. 
+Initial start will take long because it downloads the Kubernetes preload image. 
 
 The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has instructions on how to manage the Minikube cluster.
 

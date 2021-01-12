@@ -2,13 +2,14 @@
 layout: default
 ---
 # {{site.title}}
-{{site.description}}
 
-This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/).
+---
 
-The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs.
+_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/)._
 
-This version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/) running on your own workstation.  
+_The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs._
+
+_Instead, this version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/) running on your own workstation._
 
 ---
 
