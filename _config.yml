@@ -5,7 +5,7 @@ show_downloads: True
 navigation:
   - title: HOME
     url: /
-  - title: 1 - Setup the Kubernetes environment
+  - title: 1 - Setup the work environment
     url: workshop/01-pre-work/prework
   - title: 2 - Setup Istio
     url: workshop/02-app-env-exercise/SETUP_ISTIO

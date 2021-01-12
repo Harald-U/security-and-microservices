@@ -59,7 +59,7 @@ After completion of this workshop, you should understand the following applicati
 
 These are the sections of this workshop, go through all of them in sequence:
 
-* [1 - Setup the Kubernetes environment](workshop/01-pre-work/prework.md)
+* [1 - Setup the work environment](workshop/01-pre-work/prework.md)
 * [2 - Setup Istio](workshop/02-app-env-exercise/SETUP_ISTIO.md)
 * [3 - Expose the Istio Ingress gateway via HTTPS/TLS](workshop/02-app-env-exercise/SETUP_ISTIO_INGRESS.md)
 * [4 - Setup Keycloak](workshop/02-app-env-exercise/SETUP_KEYCLOAK.md)

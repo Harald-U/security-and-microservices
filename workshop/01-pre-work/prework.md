@@ -1,10 +1,17 @@
-# 1 - Setup the Kubernetes environment with Minikube
+# 1 - Setup the work environment with Minikube
 
 The instructions will work on Linux and macOS, they have not been tested on Windows.
 
 The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has detailled instructions on how to install Minikube for the different platforms.
 
-### Start a Minikube "cluster"
+### Step 1: Download the code from this repository
+
+```
+git clone https://github.com/Harald-U/security-and-microservices.git
+cd security-and-microservices/deployments/
+```
+
+### Step 2: Start a Minikube "cluster"
 
 In this workshop we will use Minikube in a somewhat minimal configuration with 2 CPUs and 4 GB om memory. 
 
