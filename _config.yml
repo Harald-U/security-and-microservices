@@ -5,5 +5,6 @@ show_downloads: True
 navigation:
   - title: Home
     url: /
+  - title: Prework
   - title: Setup the Kubernetes environment
-    url: workshop/prework
+    url: workshop/01-pre-work/prework

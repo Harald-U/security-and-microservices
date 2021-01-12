@@ -1,0 +1,41 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+spec:
+  selector:
+    app: web-app
+  ports:
+    - port: 80
+      name: http
+  type: NodePort
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+spec:
+  selector:                
+    matchLabels:     
+      app: web-app
+  replicas: 1
+  template:
+    metadata:
+      annotations: 
+        sidecar.istio.io/inject: "true" 
+      labels:
+        app: web-app
+        version: v2
+    spec:
+      containers:
+      - name: web-app
+        image: docker.io/haraldu/web-app:secure-v3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      restartPolicy: Always
+---
