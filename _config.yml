@@ -5,6 +5,24 @@ show_downloads: True
 navigation:
   - title: Home
     url: /
-  - title: Prework
   - title: Setup the Kubernetes environment
     url: workshop/01-pre-work/prework
+  - title: Setup Istio
+    url: workshop/02-app-env-exercise/SETUP_ISTIO
+  - title: Expose the Istio Ingress gateway via HTTPS/TLS
+    url: workshop/02-app-env-exercise/SETUP_ISTIO_INGRESS
+  - title: Setup Keycloak
+    url: workshop/02-app-env-exercise/SETUP_KEYCLOAK
+  - title: Deploy the microservices to Kubernetes
+    url: workshop/03-p-sec-exercise/01-README
+  - title: Secure microservices with strict mTLS
+    url: workshop/03-p-sec-exercise/02-README
+  - title: Istio Authorization
+    url: workshop/03-p-sec-exercise/03-README
+  - title: Authentication in the Vue.js fronted
+    url: workshop/04-app-sec-exercise/APPLICATION_AUTHENTICATION
+  - title: Authorization in Quarkus application
+    url: workshop/04-app-sec-exercise/APPLICATION_AUTHORIZATION
+  - title: Setup the web-application and Microservices locally
+    url: workshop/04-app-sec-exercise/README.md
+

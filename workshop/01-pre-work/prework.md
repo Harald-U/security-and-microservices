@@ -13,3 +13,21 @@ The Docker driver allows you to install Kubernetes into an existing Docker insta
 ```
 minikube start --cpus 2 --memory 4096 --driver=docker
 ```
+Output:
+
+```
+😄  minikube v1.15.1 auf Linuxmint 20.1
+✨  Using the docker driver based on user configuration
+👍  Starting control plane node minikube in cluster minikube
+🔥  Creating docker container (CPUs=2, Memory=4096MB) ...
+🐳  Vorbereiten von Kubernetes v1.19.4 auf Docker 19.03.13...
+🔎  Verifying Kubernetes components...
+🌟  Enabled addons: storage-provisioner, default-storageclass
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+```
+
+Initial start will take a moment.
+
+The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has instructions on how to manage the Minikube cluster.
+
