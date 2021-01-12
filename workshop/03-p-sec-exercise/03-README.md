@@ -43,25 +43,25 @@ The articles pod indeed uses the 'default' service account.
 
 ### Step 1: Modify deployments to use service accounts
 
-First we create 2 service accounts (sa) for our 2 services 
+First we create 2 service accounts (sa) for our 2 services
 
-```sh
+```
 kubectl create sa articles
 kubectl create sa web-api
 ```
 
-Then we replace the deployment descriptions to use the service accounts we just created: 
+Then we replace the deployment descriptions to use the service accounts: 
 
 ```sh
-kubectl replace -f $ROOT_FOLDER/articles-secure/deployment/articles-sa.yaml
-kubectl replace -f $ROOT_FOLDER/web-api-secure/deployment/web-api-sa.yaml
+kubectl replace -f articles-sa.yaml
+kubectl replace -f web-api-sa.yaml
 ```
 
 This will recreate the articles and web-api pods. Check with:
 
 ```sh
-kc get pod
-kc get pod articles-xxxxxxxxxx-yyyyy -o json | grep serviceAccount
+kubectl get pod
+kubectl get pod articles-xxxxxxxxxx-yyyyy -o json | grep serviceAccount
 ```
 Result:
 
@@ -95,7 +95,7 @@ We have an "ALLOW" policy but no rule is specified which makes it effectively a 
 Apply with:
 
 ```sh
-kubectl apply -f IKS/authorization.yaml
+kubectl apply -f authorization.yaml
 ```
 
 Check the application in the browser again. It may take a while for the policy to propagate to the Envoy but eventually you will see this error in the browser:

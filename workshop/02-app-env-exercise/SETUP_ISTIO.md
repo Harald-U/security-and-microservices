@@ -33,8 +33,7 @@ See https://istio.io/latest/docs/setup/install/ to add Istio to your Kubernetes 
 
 To configure the istioctl client tool for your workstation,
 add the /home/harald/temp/test/istio-1.8.1/bin directory to your environment path variable with:
-	 export PATH="$PATH:/home/harald/temp/test/istio-1.8.1/bin"
-
+	 export PATH="$PATH:/home/harald/temp/security-and-microservices/deployments/istio-1.8.1/bin"
 Begin the Istio pre-installation check by running:
 	 istioctl x precheck 
 ```
@@ -46,8 +45,10 @@ The installation directory contains:
 Add the istioctl client to your path using the command from the Istio installations output, e.g.:
 
 ```
-export PATH="$PATH:/home/harald/temp/test/istio-1.8.1/bin"
+export PATH="$PATH:/home/harald/temp/security-and-microservices/deployments/istio-1.8.1/bin"
 ```
+
+**Note:** Copy this PATH statement soemwhere as you may need it later!
 
 Test with
 
@@ -68,25 +69,29 @@ The output indicates that Istio is not installed in our Kubernetes cluster and t
 
 The following commands do install the Istio operator, create a namespace for the Istio backplane, and start to installation of the Istio backplane.
 
-* Operator
-```sh
-istioctl operator init
-```
+1. Operator
 
-* Namespace
-```sh
-kubectl create ns istio-system
-```
+	```sh
+	istioctl operator init
+	```
 
-* Istio deployment
-```sh
-kubectl apply -f istio.yaml
-```
+1. Namespace
 
-* Label 'default' namespace for Istio pod auto-injection
-```sh
-kubectl label namespace default istio-injection=enabled
-```
+	```sh
+	kubectl create ns istio-system
+	```
+
+1.  Istio deployment
+
+	```sh
+	kubectl apply -f istio.yaml
+	```
+
+1. Label 'default' namespace for Istio pod auto-injection
+
+	```sh
+	kubectl label namespace default istio-injection=enabled
+	```
 
 ### Step 3: Check the status of Istio deployment
 
@@ -112,16 +117,16 @@ In earlier versions of Istio, Kiali and the other telemetry services have been i
 Kiali requires Prometheus:
 
 ```
-cd istio-1.8.1/samples/addons
-kubectl apply -f prometheus.yaml
+kubectl apply -f istio-1.8.1/samples/addons/prometheus.yaml
 ```
 
 This will install Prometheus into the istio-system namespace.
+This assumes that Istio 1.8.1 was downloaded. You may need to adjust the path accordingly.
 
 To install Kiali, you need to execute this command **twice**:
 
 ```
-kubectl apply -f kiali.yaml
+kubectl apply -f istio-1.8.1/samples/addons/kiali.yaml
 ```
 
 The first execution of the command will throw errors about not finding a match for kind "MonitoringDashboard". This is expected: The kiali.yaml file creates a Custom Resource Definition (CRD) of kind "MonitoringDashboard" and this takes a moment.

@@ -1,12 +1,12 @@
 # 3 - Expose the Istio Ingress gateway via HTTPS/TLS
 
-The following procedures have been tested with Minikube. They may partially work with other Kubernetes instances like IBM Cloud Lite Kubernetes Cluster or K8d. 
+The following procedures have been tested with Minikube. They may partially work with other Kubernetes instances like IBM Cloud Lite Kubernetes Cluster or K3d. 
 
 When you install Istio on a Kubernetes Cluster, the Istio Ingress is created with a Kubernetes service of type LoadBalancer. In a production Kubernetes installation, a LoadBalancer would have a public IP address assigned to it so that it can be reached from the Internet:
 
 ![](../../images/Ingress-Loadbalancer.png)
 
-Minikube and many other Kubernetes test environments don't have the ability to do this. Check the Istio Ingress service with the following command:
+Local installations like Minikube typically don't have the ability to do this. Check the Istio Ingress service with the following command:
 
 ```
 kubectl get svc -n istio-system
@@ -42,12 +42,14 @@ You need the CLI `openssl` to do so. It should be installed on your Linux or mac
    This step makes `k8s.local` a Certificate Authority (CA).
 
    ```
-   openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -subj '/O=DHBW/CN=k8s.local' -keyout -out k8s.local.crt
+   openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -subj '/O=DHBW/CN=k8s.local' -keyout k8s.local.key -out k8s.local.crt
    ```
 
     CN=Common Name=URL (k8s.local), O=Organization (DHBW)
-     -> Root Certificate is file	k8s.local.crt  (public)
-     -> Root Key is file		k8s.local.key (private)
+
+    -> Root Certificate is file	k8s.local.crt  (public)
+
+    -> Root Key is file		k8s.local.key (private)
 
 2. **Server Certificate and Key for demo.k8s.local**
 
@@ -58,6 +60,7 @@ You need the CLI `openssl` to do so. It should be installed on your Linux or mac
     ```
 
    -> Certificate Signing Request:	demo.k8s.local.csr (intermediate)
+
    -> **Server Key:	demo.k8s.local.key (private)**
 
 
@@ -149,9 +152,8 @@ spec:
         host: web-app
 ```
 
-This VirtualService is for the Ingress Gateway definition , routing requests for host `demo.k8s.local` to 3 different services, depending on the path of the URL.
 
-The VirtualService definition for this Gateway (default-gateway-ingress) uses matching rules to map specific paths/URIs to services *that do not exist at the moment, we will create them later.* If you look in the YAML file, you can see 3 "match" rules, they are all based on the "hosts" definition:
+The VirtualService definition for this Gateway (default-gateway-ingress) uses rules to map specific paths/URIs for host `demo.k8s.local` to 3 different services *that do not exist at the moment, we will create them later.* If you look at the YAML file above, you can see the 3 "match" rules, they are all based on the "hosts" definition:
 
 ![](../../images/Gateway+VirtualService.png)
 
@@ -165,13 +167,28 @@ The VirtualService definition for this Gateway (default-gateway-ingress) uses ma
 kubectl apply -f istio-ingress-tls.yaml
 ```
 
+Open another terminal session and enter the "export PATH ..." statement from the last chapter (or change to the istio-1.81/bin directory).
+
+Open the Kiali dashboard:
+
+```
+istioctl dashboard kiali
+```
+
+Check the Istio configuration for namespace: Default.
+
+![istio config](../../images/kiali-istio-config.png)
+
+Notice the red exclamation mark for the VirtualService. The VirtualService definition references 3 Kubernetes services that do not exist at the moment.
+
+
 ### Step 3: Locally expose the Istio Ingress
 
 The Istio Gateway and VirtualService definitions can be used with the Istio Ingress NodePort.
 
 Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access). Istio Ingress service is of type LoadBalancer.
 
-1. In a separate terminal session enter the command
+1. In another new terminal session enter the command
 
     ```
     minikube tunnel
@@ -211,7 +228,7 @@ Minikube allows to assign a unique IP address to each Kubernetes service of type
 
     The external IP address (used to be `<pending>`) is now: `10.106.56.168`
 
-    Edit your hosts file (Linux: /etc/hosts), this requires root rights, and add the IP address and host name:
+    Edit your hosts file (`sudo nano /etc/hosts`), this requires root rights, and add the IP address and host name:
 
     ```
     ## Minikube

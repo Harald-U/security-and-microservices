@@ -31,88 +31,84 @@ kubectl apply -f configmap.yaml
 
 * Deploy Articles Microservice
 
-```sh
-cd $ROOT_FOLDER/articles-secure/deployment
-kubectl apply -f articles.yaml
-```
+    ```sh
+    kubectl apply -f articles.yaml
+    ```
 
 * Deploy Web-API Microservice
 
-```sh
-cd $ROOT_FOLDER/web-api-secure/deployment
-kubectl apply -f web-api.yaml
-```
+    ```sh
+    kubectl apply -f web-api.yaml
+    ```
 
 * Deploy Web-App [Vue.js](https://vuejs.org/) frontend application
 
-```sh
-cd $ROOT_FOLDER/web-app/deployment
-kubectl apply -f web-app.yaml
-```
+    ```sh
+    kubectl apply -f web-app.yaml
+    ```
 
 * Verify all pods are running
 
-```sh
-kubectl get pods
-```
+    ```sh
+    kubectl get pods
+    ```
 
 Example output:
 
-```sh
-NAME                        READY   STATUS                       RESTARTS   AGE
-articles-5df77c46b4-v7xcd   2/2     Running                0          3h35m
-keycloak-77cffb978-vjttk    2/2     Running                      0          44h
-web-api-5c9698b875-kz82k    2/2     Running                 0          3h35m
-web-app-659c4676d9-pw6f8    2/2     Running                      0          3h34m
-```
+  ```sh
+  NAME                        READY   STATUS                       RESTARTS   AGE
+  articles-5df77c46b4-v7xcd   2/2     Running                0          3h35m
+  keycloak-77cffb978-vjttk    2/2     Running                      0          44h
+  web-api-5c9698b875-kz82k    2/2     Running                 0          3h35m
+  web-app-659c4676d9-pw6f8    2/2     Running                      0          3h34m
+  ```
 
 ### STEP 3: Adjust the redirect, admin, web origins URLs in Keycloak:
 
-* Try to open the Cloud-Native-Starter application in a browser. Use the `$INGRESSURL` of your cluster, which is the URL to the frontend application `Web_APP` you deployed before.
+* Try to open the Cloud-Native-Starter application in a browser. 
 
-```sh
-echo https://$INGRESSURL
-```
+  ```sh
+  https://demo.k8s.local
+  ```
 
 * You will see we need to configure the redirect in Keycloak
 
-![](../../images/cns-wrong-redirect-uri.png)
+  ![](../../images/cns-wrong-redirect-uri.png)
 
-* Open Keycloak in a browser and login to Keycloak with `user: admin` and `password: admin`. Get the right URL by display the URL with the following terminal command.
-
-```sh
- echo https://$INGRESSURL/auth/admin/master/console/#/realms/quarkus
-```
+* Open Keycloak in a browser and login to Keycloak with `user: admin` and `password: admin`. 
+    ```sh
+    https://demo.k8s.local/auth/admin/master/console/#/realms/quarkus
+    ```
 
 * Select `Clients` and then `frontend` in Keycloak.
 
 ![](../../images/cns-ajust-client-redirect.png)
 
-* Ajust the client frontend URIs `https://YOUR-URL:auth` with valid redirect URI you get with the command:
+* Adjust the Valid Redirect URIs `https://YOUR-URL` with:
 
-```sh
- echo https://$INGRESSURL
-```
+    ```sh
+    https://demo.k8s.local
+    ```
 
-Replace the entries with your value.
-
-![](../../images/cns-ajust-client-redirect-02.png)
+  ![](../../images/cns-ajust-client-redirect-02.png)
 
 ### STEP 4: Open the Cloud Native Starter application in your browser
 
 * Use following URL:
 
-```sh
- echo https://$INGRESSURL
-```
+    ```sh
+    https://demo.k8s.local
+    ```
 
 * Login in with `user: alice` and `password: alice`
 
-![](../../images/cns-logon-keycloak.png)
+  ![](../../images/cns-logon-keycloak.png)
 
 * Now you see the entries of the articles
 
-![](../../images/cns-web-app-ui.png)
+  ![](../../images/cns-web-app-ui.png)
+
+If it fails ("Articles could not be read") refresh your browser. (Reason for failure: The articles service creates the list of articles when it is called the first time, this tends to lead to a timeout.)
 
 ---
 

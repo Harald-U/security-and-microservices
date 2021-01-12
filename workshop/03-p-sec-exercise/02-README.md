@@ -37,11 +37,11 @@ In this task we access the Web-API service using the services nodeport, the IP a
 We need a JSON Web Token (JWT) to access the service:
 
 ```sh
-export access_token=$(curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" https://$INGRESSURL/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p')
+export access_token=$(curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" --insecure https://demo.k8s.local/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p')
 echo $access_token
 ```
 
-_Note:_ REMEMBER that an access-token is only valid for 60 seconds ;-). You need to be quick with the next steps otherwise the token will already be involid!
+**Note:** REMEMBER that an access-token is only valid for 60 seconds ;-). You need to be quick with the next steps otherwise the token will already be involid!
 
 #### Step 2: Get the NodePort of the Web-API Microservice
 
@@ -53,13 +53,13 @@ echo $nodeport
 #### Step 3: Get a external Worker IP address of the Web-API Microservice
 
 ```sh
-export workerip=$(ibmcloud ks workers --cluster $MYCLUSTER | awk '/Ready/ {print $2;exit;}')
+export workerip=$(minikube ip)
 echo $workerip
 ```
 
 We now have an external IP address and port to access the Web-API service.
 
-#### Step 4: Use no TLS just `HTTP` to get the articles from the Web-API Microservice
+#### Step 4: Use no TLS, just `HTTP` to get the articles from the Web-API Microservice
 
 ```sh
 curl -i http://$workerip:$nodeport/articles -H "Authorization: Bearer $access_token"
@@ -97,7 +97,6 @@ This is the reason why we installed Keycloak into the default namespace: that wa
 #### Step 1: The following command creates a PeerAuthentication policy for the 'default' namespace.
 
 ```sh
-cd $ROOT_FOLDER/IKS
 kubectl apply -f mtls.yaml
 ```
 
@@ -110,7 +109,7 @@ As you will see, you can no longer access the service, even if you know its Node
 * Create access-token
   
   ```sh
-   export access_token=$(curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" https://$INGRESSURL/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p')
+   export access_token=$(curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" --insecure https://demo.k8s.local/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p')
    echo $access_token
   ```
 
