@@ -1,4 +1,4 @@
-# Authentication in the Vue.js fronted
+# 8 - Authentication in the Vue.js fronted
 
 There are several ways to use Keycloak from web applications. The easiest option is to use the official Keycloak JavaScript client library which is defined as dependency in package.json.
 
@@ -54,3 +54,7 @@ As you see in the image below  the `Vuex store` saves `access token`, `id token`
 ---
 
 [Related blog post](http://heidloff.net/article/securing-vue-js-applications-keycloak/)
+
+---
+
+**Continue with** [9 - Authorization in Quarkus application](./APPLICATION_AUTHORIZATION.md)

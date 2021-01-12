@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Security and Microservices
-description: Get started with security for your Java Microservices application
+description: Get started with security for your cloud native Java Microservices application
 show_downloads: True
 navigation:
   - title: Home
@@ -24,5 +24,5 @@ navigation:
   - title: 9 - Authorization in Quarkus application
     url: workshop/04-app-sec-exercise/APPLICATION_AUTHORIZATION
   - title: 10 - Setup the web-application and Microservices locally
-    url: workshop/04-app-sec-exercise/README.md
+    url: workshop/04-app-sec-exercise/README
 

@@ -1,4 +1,4 @@
-# Secure microservices with strict mTLS
+# 6 - Secure microservices with strict mTLS
 
 Istio uses *Mutual authentication with Transport Layer Security (mTLS)* to secure the communication between microservices without requiring application code changes. Security is provided by authenticating and encrypting communication paths within the cluster. This is becoming a common security and compliance requirement. Delegating communication security to Istio (as opposed to implementing TLS in each microservice) ensures that your application will be deployed with consistent and manageable security policies.
 
@@ -140,3 +140,7 @@ If you check the Cloud Native Starter frontend in the browser, nothing should ha
 This is the result of your work so far:
 
 ![](../../images/IstioSecurityArchitecture.png)
+
+---
+
+**Continue with** [7 - Istio Authorization](./03-README.md)

@@ -137,3 +137,6 @@ kubectl apply -f authorization-w-rule.yaml
 
 Check the application in the browser again. It may take a while for the policy to propagate to the Envoy but eventually you will see that the application works.
 
+---
+
+**Continue with** [8 - Authentication in the Vue.js fronted](../04-app-sec-exercise/APPLICATION_AUTHENTICATION.md)

@@ -11,7 +11,7 @@ In the following exercises we will:
 
 ---
 
-# Setup Istio
+# 2 - Setup Istio
 
 ### Step 1: Download Istio
 
@@ -143,3 +143,7 @@ istiod-7c67c6b6c8-dskz6                 1/1     Running   0          10m
 kiali-7476977cf9-vfxtm                  1/1     Running   0          3m28s
 prometheus-7bfddb8dbf-fvt87             2/2     Running   0          49s
 ```
+
+---
+
+**Continue with** [3 - Expose the Istio Ingress gateway via HTTPS/TLS](./SETUP_ISTIO_INGRESS.md)

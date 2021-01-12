@@ -1,4 +1,4 @@
-# Expose the Istio Ingress gateway via HTTPS/TLS
+# 3 - Expose the Istio Ingress gateway via HTTPS/TLS
 
 The following procedures have been tested with Minikube. They may partially work with other Kubernetes instances like IBM Cloud Lite Kubernetes Cluster or K8d. 
 
@@ -220,3 +220,6 @@ Minikube allows to assign a unique IP address to each Kubernetes service of type
    
     In the future our web application can be accessed on your notebook with the URL `https://demo.k8s.local`
 
+---
+
+**Continue with** [4 - Setup Keycloak](./SETUP_KEYCLOAK.md)

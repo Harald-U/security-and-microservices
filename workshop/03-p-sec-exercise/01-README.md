@@ -1,4 +1,4 @@
-# Deploy the microservices to Kubernetes
+# 5 - Deploy the microservices to Kubernetes
 
 In this exercise we will run the application in your Kubernetes cluster using precompiled container images for our sample application: articles-secure, web-api-secure, and web-app. These container images have been uploaded to [Docker Hub](https://hub.docker.com/u/haraldu).
 
@@ -113,3 +113,7 @@ Replace the entries with your value.
 * Now you see the entries of the articles
 
 ![](../../images/cns-web-app-ui.png)
+
+---
+
+**Continue with** [6 - Secure microservices with strict mTLS](./02-README.md)

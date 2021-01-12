@@ -4,6 +4,14 @@ layout: default
 # {{site.title}}
 {{site.description}}
 
+This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/).
+
+The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs.
+
+This version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/) running on your own workstation.  
+
+---
+
 In this workshop you will learn how to get started with Application Security from two perspectives:
 * Platform security
 * Authentication and Authorization implementation
@@ -49,12 +57,19 @@ After completion of this workshop, you should understand the following applicati
 
 ### Agenda
 
-These are the sections of this workshop, go through all of them in sequence, start with `1. Setup the IBM Cloud Environment` :
+These are the sections of this workshop, go through all of them in sequence:
 
- 1. [Setup the Kubernetes Environment](pre-work/README.md) 
- 2. [Setup the application environment](app-env-exercise-01/README.md) 
- 3. [Platform security with mTLS](p-sec-exercise-01/README.md) 
- 4. [Application security with Keycloak and Quarkus](app-sec-exercise-01/README.md) 
+* [1 - Setup the Kubernetes environment](workshop/01-pre-work/prework.md)
+* [2 - Setup Istio](workshop/02-app-env-exercise/SETUP_ISTIO.md)
+* [3 - Expose the Istio Ingress gateway via HTTPS/TLS](workshop/02-app-env-exercise/SETUP_ISTIO_INGRESS.md)
+* [4 - Setup Keycloak](workshop/02-app-env-exercise/SETUP_KEYCLOAK.md)
+* [5 - Deploy the microservices to Kubernetes](workshop/03-p-sec-exercise/01-README.md)
+* [6 - Secure microservices with strict mTLS](workshop/03-p-sec-exercise/02-README.md)
+* [7 - Istio Authorization](workshop/03-p-sec-exercise/03-README.md)
+* [8 - Authentication in the Vue.js fronted](workshop/04-app-sec-exercise/APPLICATION_AUTHENTICATION.md)
+* [9 - Authorization in Quarkus application](workshop/04-app-sec-exercise/APPLICATION_AUTHORIZATION.md)
+* [10 - Setup the web-application and Microservices locally](workshop/04-app-sec-exercise/README.md)
+
 
 ### Compatibility
 

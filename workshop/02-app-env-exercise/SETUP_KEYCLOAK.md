@@ -1,4 +1,4 @@
-# Setup Keycloak
+# 4 - Setup Keycloak
 
 These setup instructions are based on [Keycloak - Guide - Keycloak on Kubernetes](https://www.keycloak.org/getting-started/getting-started-kube).
 
@@ -66,3 +66,7 @@ Try to create an access token:
 ```sh
 curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" --insecure https://demo.k8s.local/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p'
 ```
+
+---
+
+**Continue with** [5 - Deploy the microservices to Kubernetes](../03-p-sec-exercise/01-README.md)

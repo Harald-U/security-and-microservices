@@ -1,4 +1,4 @@
-# Setup the Kubernetes environment with Minikube
+# 1 - Setup the Kubernetes environment with Minikube
 
 The instructions will work on Linux and macOS, they have not been tested on Windows.
 
@@ -31,3 +31,6 @@ Initial start will take a moment.
 
 The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has instructions on how to manage the Minikube cluster.
 
+---
+
+**Continue with** [2 - Setup Istio](../02-app-env-exercise/SETUP_ISTIO.md)
