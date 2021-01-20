@@ -70,7 +70,7 @@ You need the CLI `openssl` to do so. It should be installed on your Linux or mac
     openssl x509 -req -days 365 -CA k8s.local.crt -CAkey k8s.local.key -set_serial 0 -in demo.k8s.local.csr -out demo.k8s.local.crt
     ```
 
-     -> **Server Certificate: 	demo.k8s.local.crt**	
+     -> **Server Certificate: 	demo.k8s.local.crt (public)**	
 
 4. **Create Kubernetes TLS Secret from Server Key and Certificate**
     The Pod that represents the Istio Ingress gateway runs in the istio-system namespace. The Ingress gateway needs the Servers (private) key and (public) certificate to handle TLS requests. They are stored on Kubernetes in form of a secret of type TLS.

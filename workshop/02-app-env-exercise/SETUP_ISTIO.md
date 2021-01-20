@@ -15,10 +15,12 @@ In the following exercises we will:
 
 ### Step 1: Download Istio
 
+Note: The workshop has been tested with and is written for Istio 1.8.1. 
+
 Go to the [Istio release page](https://github.com/istio/istio/releases/tag/1.8.1) to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
 
 ```
-curl -L https://istio.io/downloadIstio | sh -
+curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.8.1 sh -
 ```
 
 Output:
@@ -48,7 +50,7 @@ Add the istioctl client to your path using the command from the Istio installati
 export PATH="$PATH:/home/harald/temp/security-and-microservices/deployments/istio-1.8.1/bin"
 ```
 
-**Note:** Copy this PATH statement soemwhere as you may need it later!
+**Note:** Copy this PATH statement somewhere as you may need it later!
 
 Test with
 
