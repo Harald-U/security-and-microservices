@@ -13,7 +13,7 @@ navigation:
     url: workshop/02-app-env-exercise/SETUP_ISTIO_INGRESS
   - title: 4 - Setup Keycloak
     url: workshop/02-app-env-exercise/SETUP_KEYCLOAK
-  - title: 5 - Deploy the microservices to Kubernetes
+  - title: 5 - Deploy the microservices to K8s
     url: workshop/03-p-sec-exercise/01-README
   - title: 6 - Strict mTLS
     url: workshop/03-p-sec-exercise/02-README
