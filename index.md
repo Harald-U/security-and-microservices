@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-# {{site.title}}
-
----
 
 _This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/)._
 
