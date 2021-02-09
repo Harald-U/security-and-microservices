@@ -1,6 +1,6 @@
 # Overview: Setup Istio and Keycloak
 
-We need Keycloak for authentication and authorization. And we need Istio to secure access to our services. 
+We need Istio to secure access to our services. And we need Keycloak for authentication and authorization. 
 
 In the following exercises we will:
 
@@ -69,7 +69,7 @@ The output indicates that Istio is not installed in our Kubernetes cluster and t
 
 ### Step 2: Setup Istio with an operator 
 
-The following commands do install the Istio operator, create a namespace for the Istio backplane, and start to installation of the Istio backplane.
+The following commands will install the Istio operator, create a namespace for the Istio backplane, and start to installation of the Istio backplane.
 
 1. Operator
 

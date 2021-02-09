@@ -2,11 +2,13 @@
 layout: default
 ---
 
-_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/)._
+# Overview
+
+_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/){:target="_blank"}._
 
 _The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs._
 
-_Instead, this version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/) running on your own workstation._
+_Instead, this version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/){:target="_blank"} running on your own workstation._
 
 ---
 
@@ -19,7 +21,7 @@ We will show you with an example application:
 * How to secure communication between Microservices with Istio and mTLS
 * How to implement authorization and authentication with the Open Source Identity and Access Management system Keycloak and JSON Web Tokens (JWT)
 
-The exercises are based on an example application based on our Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security), build with Quarkus and Microprofile
+The exercises are based on an example application based on our Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security){:target="_blank"}, build with Quarkus and Microprofile
 
 The following screenshot shows the web application, you have to logon to see the list of articles.
 
@@ -44,12 +46,12 @@ To see the results in the web application, users need to be authenticated and th
 After completion of this workshop, you should understand the following application security related topics:
 
 **Application security provided by the platform**
-* [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)/[HTTPS](https://en.wikipedia.org/wiki/HTTPS)
-* [mTLS](https://en.wikipedia.org/wiki/Mutual_authentication)
+* [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}/[HTTPS](https://en.wikipedia.org/wiki/HTTPS){:target="_blank"}
+* [mTLS](https://en.wikipedia.org/wiki/Mutual_authentication){:target="_blank"}
 
 **Application security with Keycloak and Quarkus**
-* [Authentication with Keycloak](https://en.wikipedia.org/wiki/Authentication) on the Web Fronted
-* [Authorization in Quarkus](https://en.wikipedia.org/wiki/Authorization) for specific Microservices in the backend
+* [Authentication with Keycloak](https://en.wikipedia.org/wiki/Authentication){:target="_blank"} on the Web Fronted
+* [Authorization in Quarkus](https://en.wikipedia.org/wiki/Authorization){:target="_blank"} for specific Microservices in the backend
 
 *The scope of this workshop is not to explain every aspect of application security.*
 
@@ -81,27 +83,26 @@ This workshop has been tested on the following platforms:
 
 ### Technology Used
 
-* [Microservices architecture](https://en.wikipedia.org/wiki/Microservices)
-* [Keycloak](https://www.keycloak.org)
-* [Jakarta EE](https://jakarta.ee/)
-* [MicroProfile](https://microprofile.io/)
-* [Quarkus](https://quarkus.io/ingress)
-* [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-* [Istio](https://https://istio.io)
-* [Vue.js](https://vuejs.org/)
-* [git 2.24.1 or higher](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [yarn 1.22.4 or higher](https://yarnpkg.com)
-* [Node.js v14.6.0 or higher](https://nodejs.org/en/)
-* [Apache Maven 3.6.3](https://maven.apache.org/ref/3.6.3/maven-embedder/cli.html)
+* [Microservices architecture](https://en.wikipedia.org/wiki/Microservices){:target="_blank"}
+* [Keycloak](https://www.keycloak.org){:target="_blank"}
+* [Jakarta EE](https://jakarta.ee/){:target="_blank"}
+* [MicroProfile](https://microprofile.io/){:target="_blank"}
+* [Quarkus](https://quarkus.io/ingress){:target="_blank"}
+* [Istio](https://https://istio.io){:target="_blank"}
+* [Vue.js](https://vuejs.org/){:target="_blank"}
+* [git 2.24.1 or higher](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+* [yarn 1.22.4 or higher](https://yarnpkg.com){:target="_blank"}
+* [Node.js v14.6.0 or higher](https://nodejs.org/en/){:target="_blank"}
+* [Apache Maven 3.6.3](https://maven.apache.org/ref/3.6.3/maven-embedder/cli.html){:target="_blank"}
 
 ### Credits
 
-* [Niklas Heidloff](https://twitter.com/nheidloff)
-* [Harald Uebele](https://twitter.com/Harald_U)
-* [Thomas Südbröcker](https://twitter.com/tsuedbroecker)
+* [Niklas Heidloff](https://twitter.com/nheidloff){:target="_blank"}
+* [Harald Uebele](https://twitter.com/Harald_U){:target="_blank"}
+* [Thomas Südbröcker](https://twitter.com/tsuedbroecker){:target="_blank"}
 
 ### Additional resources
 
 [Here](workshop/BLOGS.md) are some blogs that describe how this project has been implemented-
 
-The presentation that goes with this workshop is available [here](images/App-Security-Final-V1-20200821.pdf).
+The presentation that goes with this workshop is available [here](images/App-Security-Final-V1-20201006.pdf){:target="_blank"}.

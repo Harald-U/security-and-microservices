@@ -2,7 +2,7 @@
 
 The instructions will work on Linux and macOS, they have not been tested on Windows.
 
-The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has detailled instructions on how to install Minikube for the different platforms.
+The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms.
 
 ### Step 1: Download the code from this repository
 
@@ -39,7 +39,7 @@ Output:
 🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 ```
 
-Initial start will take long because it downloads the Kubernetes preload image. 
+Initial start will take a while because it downloads the Kubernetes preload image. 
 
 The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/) has instructions on how to manage the Minikube cluster.
 

@@ -79,7 +79,9 @@ You need the CLI `openssl` to do so. It should be installed on your Linux or mac
 
     ```
     kubectl create -n istio-system secret tls demo-credential --key=demo.k8s.local.key --cert=demo.k8s.local.crt
-    ```   
+    ```  
+
+    The Istio Ingress Gateway service and pod are running in the istio-system namespace. The pod needs access to the secret hence it must be created in the istio-system namespace. 
 
 
 ### Step 2: Create an Istio Gateway definition and traffic rules

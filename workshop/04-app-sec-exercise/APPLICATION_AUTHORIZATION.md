@@ -6,15 +6,13 @@ Quarkus comes with two great quides that describe how to use Keycloak in web app
 * [Use OpenID Connect to Protect Web Applications](https://quarkus.io/guides/security-openid-connect-web-authentication)
 * Develop protected Endpoints
 
-The Microservice Articles provides an endpoint `/articles` which only users with the role `user` can access. In application.properties the Keycloak URL is defined as well as the client ID and secret.
-
-The shows the simplified architecture:
+This diagram shows the simplified architecture:
 
 ![](../../images/architecture-auth.png)
 
 ### Developing protected Endpoints
 
-The service Articles provides an endpoint ‘/articles’ which only users with the role ‘user’ can access. In application.properties the Keycloak URL is defined as well as the client ID and secret.
+The service Articles provides an endpoint ‘/articles’ which only users with the role ‘user’ can access. In the application.properties file, the Keycloak URL is defined as well as the client ID and secret.
 
 ```Java
 quarkus.oidc.auth-server-url=https://YOUR_URL/auth/realms/quarkus
@@ -60,9 +58,9 @@ quarkus.http.cors=true
 org.eclipse.microprofile.rest.client.propagateHeaders=Authorization
 ```
 
-The last line (6) is important again. This allows forwarding the authorization header with the JWT token without having to implement any code.
+Again, the last line (6) is important: This allows forwarding the authorization header with the JWT token without having to implement any code.
 
-```Java
+```java
 private ArticlesService articlesService;
  
 @PostConstruct
