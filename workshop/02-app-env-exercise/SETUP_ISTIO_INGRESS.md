@@ -188,7 +188,9 @@ Notice the red exclamation mark for the VirtualService. The VirtualService defin
 
 The Istio Gateway and VirtualService definitions can be used with the Istio Ingress NodePort.
 
-Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access). Istio Ingress service is of type LoadBalancer.
+But Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access). Istio Ingress service is of type LoadBalancer.
+
+I am not able to test this on Windows, though, and I have doubts that it will work on Windows but please give it a try first. **If**  `minikube tunnel` **fails for you, continue with** [Step 3b: Expose Istio Ingress via NodePort](#with-nodeport).
 
 1. In another new terminal session enter the command
 
@@ -198,7 +200,8 @@ Minikube allows to assign a unique IP address to each Kubernetes service of type
 
     `minikube tunnel` runs as a process, creating a network route on the host to the service ... using the cluster’s IP address as a gateway. The tunnel command exposes the external IP directly to any program running on the host operating system.
 
-    The command requires root rights (sudo) because it creates a network configuration.
+    Linux, Mac: The command requires root rights (sudo) because it creates a network configuration.
+    Windows: Run PowerShell as Administrator in elevated mode.
 
     Output (will repeat every few seconds):
 
@@ -238,6 +241,56 @@ Minikube allows to assign a unique IP address to each Kubernetes service of type
     ```
    
     In the future our web application can be accessed on your notebook with the URL `https://demo.k8s.local`
+
+---
+
+**Continue with** [4 - Setup Keycloak](./SETUP_KEYCLOAK.md)
+
+---
+
+### Step 3b (Alternative): Expose Istio Ingress via NodePort<a name="with-nodeport"></a>
+
+These instructions should be used in cases where `minikube tunnel` fails. The Istio Ingress Gateway can be accessed using its Nodeport, too. This is not aes elegant since you need to add the correct Nodeport every time to URLs used.
+
+1. Get the Minikube IP address
+
+    `minikube ip`
+
+    Result, e.g.:
+
+    `192.168.49.2` 
+
+2. Enter this IP address into hosts (Linux, mac: /etc/hosts; Windows: C:\Windows\System32\drivers\etc\hosts) 
+
+    `192.168.49.2 demo.k8s.local` 
+
+    Example Windows:
+
+    ![windows hosts](../../images/hosts-windows.png)
+
+3. Determine the https-Nodeport:
+
+    ```
+    NP=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].nodePort}')
+    echo $NP
+    ```
+
+    Result, e.g.:
+
+    `31220`
+
+4. Ingress URL:
+
+    ```
+    echo "https:\\\demo.k8s.local:$NP"
+    ```
+
+    Result, e.g.:
+
+    `https:\\demo.k8s.local:31220`
+
+  In the future our web application can be accessed on your notebook with this URL.
+
 
 ---
 
