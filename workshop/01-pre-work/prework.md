@@ -1,6 +1,6 @@
 # 1 - Setup the work environment with Minikube
 
-The instructions will work on Linux and macOS, they have not been tested on Windows.
+The instructions will work on Linux and macOS, they have not been tested on Windows bt should work, too.
 
 The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms.
 

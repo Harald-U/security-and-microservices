@@ -190,7 +190,7 @@ The Istio Gateway and VirtualService definitions can be used with the Istio Ingr
 
 But Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access). Istio Ingress service is of type LoadBalancer.
 
-I am not able to test this on Windows, though, and I have doubts that it will work on Windows but please give it a try first. **If**  `minikube tunnel` **fails for you, continue with** [Step 3b: Expose Istio Ingress via NodePort](#with-nodeport).
+I am not able to test this on Windows, though, so please give this method a try first. **If**  `minikube tunnel` **fails for you, continue with** [Step 3b: Expose Istio Ingress via NodePort](#with-nodeport).
 
 1. In another new terminal session enter the command
 
