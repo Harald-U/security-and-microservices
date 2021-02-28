@@ -32,7 +32,7 @@ Our Minikube cluster doesn't hava a public IP address and you probably don't own
 
 But we can still create a "self-signed" TLS certificate if we want to explore how to create a [secure Istio Ingress](https://istio.io/latest/docs/tasks/traffic-management/ingress/secure-ingress/).
 
-You need the CLI `openssl` to do so. It should be installed on your Linux or macOS, already.
+You need the CLI `openssl` to do so. It should be installed on your Linux or macOS, already. It is not installed by default on Windows, the [OpenSSL Wiki](https://wiki.openssl.org/index.php/Binaries) has multiple sources. If you do not want to install `openssl`, there are ready to use certificates in the `deployments/TLS` directory. 
 
 * Our organisation will be represented by the name **k8s.local**
 * Our Istio Ingress will handle requests for **demo.k8s.local**
