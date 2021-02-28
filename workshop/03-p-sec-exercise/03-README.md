@@ -1,4 +1,9 @@
-# Istio Authorization
+---
+title: 7 - Istio Authorization
+layout: default
+---
+
+# 7 - Istio Authorization
 
 **This is an optional lab, run through it if time permits.**
 

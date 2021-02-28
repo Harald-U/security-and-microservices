@@ -1,3 +1,8 @@
+---
+title: 2 - Setup Istio
+layout: default
+---
+
 # Overview: Setup Istio and Keycloak
 
 We need Istio to secure access to our services. And we need Keycloak for authentication and authorization. 

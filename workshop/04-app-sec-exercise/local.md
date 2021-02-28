@@ -1,3 +1,8 @@
+---
+title: Setup locally
+layout: default
+---
+
 # Setup the web-application and Microservices locally
 
 To run these optional exercises you need to ensure you have installed the following tools on your local machine and you can run them in your terminal sessions.

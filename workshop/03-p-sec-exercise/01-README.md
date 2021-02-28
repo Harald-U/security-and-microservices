@@ -1,3 +1,8 @@
+---
+title: 5 - Deploy the microservices to K8s
+layout: default
+---
+
 # 5 - Deploy the microservices to Kubernetes
 
 In this exercise we will run the application in your Kubernetes cluster using precompiled container images for our sample application: articles-secure, web-api-secure, and web-app. These container images have been uploaded to [Docker Hub](https://hub.docker.com/u/haraldu).

@@ -1,3 +1,8 @@
+---
+title: 3 - Istio Ingress gateway via HTTPS/TLS
+layout: default
+---
+
 # 3 - Expose the Istio Ingress gateway via HTTPS/TLS
 
 The following procedures have been tested with Minikube. They may partially work with other Kubernetes instances like IBM Cloud Lite Kubernetes Cluster or K3d. 

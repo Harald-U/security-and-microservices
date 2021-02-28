@@ -1,4 +1,9 @@
-# Authorization in Quarkus application
+---
+title: 9 - Authorization in Quarkus app
+layout: default
+---
+
+# 9 - Authorization in Quarkus application
 
 Quarkus comes with two great quides that describe how to use Keycloak in web apps and services:
 

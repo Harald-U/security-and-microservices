@@ -1,0 +1,3 @@
+The public and private keys in this directory are for demo and workshop purposes only.
+
+They have no real "value" ...

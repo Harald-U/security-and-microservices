@@ -1,3 +1,8 @@
+---
+title: 4 - Setup Keycloak
+layout: default
+---
+
 # 4 - Setup Keycloak
 
 These setup instructions are based on [Keycloak - Guide - Keycloak on Kubernetes](https://www.keycloak.org/getting-started/getting-started-kube).

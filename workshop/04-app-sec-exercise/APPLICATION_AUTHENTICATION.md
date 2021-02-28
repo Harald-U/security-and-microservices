@@ -1,3 +1,8 @@
+---
+title: 8 - Authentication in the Vue.js fronted
+layout: default
+---
+
 # 8 - Authentication in the Vue.js fronted
 
 There are several ways to use Keycloak from web applications. The easiest option is to use the official Keycloak JavaScript client library which is defined as dependency in package.json.
