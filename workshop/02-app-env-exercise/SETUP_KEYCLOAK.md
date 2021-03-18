@@ -9,7 +9,7 @@ These setup instructions are based on [Keycloak - Guide - Keycloak on Kubernetes
 
 The instructions go into installing an Ingress for Keycloak. But we have Istio installed and we will be using the Istio Ingress to access Keycloak externally. The original `keycloak.yaml` is modified and the `NodePort` has been removed. 
 
-Note: This is a "ephemeral" installation of Keycloak, there is no database used for persistance. Sufficient for a workshop but not suitable for production use!
+Note: This is a "ephemeral" installation of Keycloak, there is no database used for persistence. Sufficient for a workshop but not suitable for production use!
 
 ### Step 1: Deploy Keycloak
 
@@ -29,7 +29,7 @@ Continue when both containers are ready:
 
 ### Step 3: Access Keycloak
 
-Get the Keycloak URL and open the URL in your browser:
+Open the Keycloak URL in your browser:
 
 ```sh
 https://demo.k8s.local/auth
