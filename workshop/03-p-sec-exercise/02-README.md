@@ -48,26 +48,17 @@ echo $access_token
 
 **Note:** REMEMBER that an access-token is only valid for 60 seconds ;-). You need to be quick with the next steps otherwise the token will already be involid!
 
-#### Step 2: Get the NodePort of the Web-API Microservice
+#### Step 2: Get the URL of the Web-API Microservice
 
 ```sh
-export nodeport=$(kubectl get svc web-api --ignore-not-found --output 'jsonpath={.spec.ports[*].nodePort}')
-echo $nodeport
+export webapi=$(minikube service web-api --url)
+echo $webapi
 ```
 
-#### Step 3: Get a external Worker IP address of the Web-API Microservice
+#### Step 3: Use no TLS, just `HTTP` to get the articles from the Web-API Microservice
 
 ```sh
-export workerip=$(minikube ip)
-echo $workerip
-```
-
-We now have an external IP address and port to access the Web-API service.
-
-#### Step 4: Use no TLS, just `HTTP` to get the articles from the Web-API Microservice
-
-```sh
-curl -i http://$workerip:$nodeport/articles -H "Authorization: Bearer $access_token"
+curl -i $webapi/articles -H "Authorization: Bearer $access_token"
 ```
 
 Example output:
@@ -77,10 +68,8 @@ HTTP/1.1 200 OK
 cache-control: no-cache
 content-length: 1663
 content-type: application/json
-x-envoy-upstream-service-time: 60
-x-envoy-peer-metadata: CjgKDElOU1RBTkNF*****kaB3dlYi1hcGk=
-x-envoy-peer-metadata-id: sidecar~172.30.83.82~web-api-5c9698b875-sn9ck.default~default.svc.cluster.local
-date: Wed, 05 Aug 2020 14:15:57 GMT
+x-envoy-upstream-service-time: 27
+date: Fri, 19 Mar 2021 14:40:24 GMT
 server: istio-envoy
 x-envoy-decorator-operation: web-api.default.svc.cluster.local:8081/*
 
@@ -121,7 +110,7 @@ As you will see, you can no longer access the service, even if you know its Node
 * Invoke Web-API Microservice
   
   ```sh
-  curl -i http://$workerip:$nodeport/articles -H "Authorization: Bearer $access_token"
+  curl -i $webapi/articles -H "Authorization: Bearer $access_token"
   ```
   
    Example output:
