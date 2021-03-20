@@ -23,9 +23,17 @@ kubectl apply -f keycloak.yaml
 kubectl get pods
 ```
 
-Notice that there are two containers in the pod, one for Keycloak itself, the other is the Istio Envoy proxy.
+It takes some time for the pod to start. Notice that there are two containers in the pod, one for Keycloak itself, the other is the Istio Envoy proxy:
 
-Continue when both containers are ready:
+```sh
+$ kubectl get pod 
+NAME                        READY   STATUS    RESTARTS   AGE
+keycloak-5c7b8b7c4c-l7j4f   2/2     Running   0          3m6s
+```
+
+
+
+Continue when both containers are ready.
 
 ### Step 3: Access Keycloak
 
@@ -62,6 +70,8 @@ Click on the blue "Add realm" button that appears.
 Click on "Select file" and import the "quarkus-realm.json" file from the deployments directory.
 
 The name will be "quarkus", the "Create" button will be enabled. Click on "Create".
+
+**Note:** If you stop Minikube (maybe you want to continue tomorrow?) and later start it again, the Keycloak pod will be recreated. Our setup doesn't use a database for persistence, hence the imported realm will be gone and the rest of the sample application will not start since it cannot retrieve data from Keycloak. You will need to repeat Step 5 of these instructions and then wait for the sample app to restart.
 
 
 ### Step 6: Verify the newly created realm

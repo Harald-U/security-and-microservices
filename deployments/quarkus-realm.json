@@ -479,8 +479,8 @@
       "redirectUris": [
         "http://localhost:8080/*",
         "http://localhost:8080/*/*",
-        "https://YOUR-URL/*",
-        "https://YOUR-URL/*/*"
+        "https://demo.k8s.local/*",
+        "https://demo.k8s.local/*/*"
       ],
       "webOrigins": [
         "http://localhost:8080","'*'","*"

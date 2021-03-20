@@ -94,7 +94,7 @@ The following commands will install the Istio operator, create a namespace for t
 	kubectl apply -f istio.yaml
 	```
 
-1. Label 'default' namespace for Istio pod auto-injection
+2. Enable [Istio pod auto-injection](https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/){:target="_blank"} for the 'default' namespace  
 
 	```sh
 	kubectl label namespace default istio-injection=enabled

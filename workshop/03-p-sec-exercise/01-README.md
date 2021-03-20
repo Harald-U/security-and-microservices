@@ -68,6 +68,7 @@ Example output:
   web-app-659c4676d9-pw6f8    2/2     Running                      0          3h34m
   ```
 
+<!--
 ### STEP 3: Adjust the redirect, admin, web origins URLs in Keycloak:
 
 * Try to open the Cloud-Native-Starter application in a browser. 
@@ -97,7 +98,11 @@ Example output:
 
   ![](../../images/cns-ajust-client-redirect-02.png)
 
-### STEP 4: Open the Cloud Native Starter application in your browser
+### STEP 4: 
+
+--> 
+
+### STEP 3: Open the Cloud Native Starter application in your browser
 
 * Use following URL:
 
