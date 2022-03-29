@@ -31,8 +31,6 @@ NAME                        READY   STATUS    RESTARTS   AGE
 keycloak-5c7b8b7c4c-l7j4f   2/2     Running   0          3m6s
 ```
 
-
-
 Continue when both containers are ready.
 
 ### Step 3: Access Keycloak
@@ -43,7 +41,9 @@ Open the Keycloak URL in your browser:
 https://demo.k8s.local/auth
 ```
 
-Note: This will work because we created a VirtualService in the previous exercise that maps the '/auth' URI to the Keycloak service.
+You may need to accept the security risk in your browser, we are using a self-signed certificate!
+
+Note: This URL will work because we created a VirtualService in the previous exercise that maps the '/auth' URI to the Keycloak service.
 
 ### Step 4: Try to logon to Keycloak
 

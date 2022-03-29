@@ -174,19 +174,22 @@ The VirtualService definition for this Gateway (default-gateway-ingress) uses ru
 kubectl apply -f istio-ingress-tls.yaml
 ```
 
-Open another terminal session and enter the "export PATH ..." statement from the last chapter (or change to the istio-1.81/bin directory).
+Ignore the warnings, the required services are not installed, yet.
 
-Open the Kiali dashboard:
+
+Open another terminal session and enter the following command:
 
 ```
-istioctl dashboard kiali
+kubectl port-forward service/kiali 20001:20001 -n istio-system
 ```
+
+Then open the Kiali dashboard at http://localhost:20001/
 
 Check the Istio configuration for namespace: Default.
 
 ![istio config](../../images/kiali-istio-config.png)
 
-Notice the red exclamation mark for the VirtualService. The VirtualService definition references 3 Kubernetes services that do not exist at the moment.
+Notice the red exclamation mark for the VirtualService. The VirtualService definition references 3 Kubernetes services that do not exist at the moment. these are the warnings you saw previously when appling `istio-ingress-tls.yaml`.
 
 
 ### Step 3: Locally expose the Istio Ingress
