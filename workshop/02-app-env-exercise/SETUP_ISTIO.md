@@ -65,7 +65,7 @@ kubectl apply -f istio-1.12.0/samples/addons/prometheus.yaml
 This will install Prometheus into the istio-system namespace.
 This assumes that Istio 1.12.0 was downloaded. You may need to adjust the path accordingly.
 
-To install Kiali, you need to execute this command **twice**:
+To install Kiali, you need to execute this command:
 
 ```
 kubectl apply -f istio-1.12.0/samples/addons/kiali.yaml

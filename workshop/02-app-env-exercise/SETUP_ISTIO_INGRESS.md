@@ -183,7 +183,7 @@ Open another terminal session and enter the following command:
 kubectl port-forward service/kiali 20001:20001 -n istio-system
 ```
 
-Then open the Kiali dashboard at http://localhost:20001/
+Then open the Kiali dashboard at [http://localhost:20001/](http://localhost:20001/)
 
 Check the Istio configuration for namespace: Default.
 
@@ -258,7 +258,7 @@ I am not able to test this on Windows, though, so please give this method a try 
 
 ### Step 3b (Alternative): Expose Istio Ingress via NodePort<a name="with-nodeport"></a>
 
-These instructions should be used in cases where `minikube tunnel` fails. The Istio Ingress Gateway can be accessed using its Nodeport, too. This is not aes elegant since you need to add the correct Nodeport every time to URLs used.
+These instructions should be used in cases where `minikube tunnel` fails. The Istio Ingress Gateway can be accessed using its Nodeport, too. This is not as elegant since you need to add the correct Nodeport every time to URLs used.
 
 1. Get the Minikube IP address
 
