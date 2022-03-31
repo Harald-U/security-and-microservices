@@ -50,7 +50,18 @@ istio-ingressgateway-75f6d79f48-bqhhb   1/1     Running   0          32s
 istiod-7c67c6b6c8-dskz6                 1/1     Running   0          49s
 ```
 
-### Step 3: Install Kiali
+### Step 3: Enable automatic sidecar injection
+
+This command enables automatic sidecar injection for the `default` namespace:
+
+```
+$ kubectl label namespace default istio-injection=enabled	
+```
+
+Without this setting we will not use Istio although it is installed! 
+
+
+### Step 4: Install Kiali
 
 [Kiali](https://kiali.io/) is an observability console for Istio with service mesh configuration and validation capabilities. It helps you understand the structure and health of your service mesh by monitoring traffic flow to infer the topology and report errors. 
 
