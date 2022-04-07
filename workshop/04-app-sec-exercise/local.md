@@ -58,7 +58,7 @@ The image below shows the relevant elements we will use later.
 Open the first terminal session and enter:
 
 ```sh
-$ docker run -it -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -p 8282:8080 jboss/keycloak:9.0.2
+docker run -it -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -p 8282:8080 jboss/keycloak:9.0.2
 ```
 #### Step 2: Import the existing realm configuration
 

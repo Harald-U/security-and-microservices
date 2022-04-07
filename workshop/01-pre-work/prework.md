@@ -31,7 +31,7 @@ minikube start --cpus 2 --memory 4096 --driver=docker
 There may be a "leftover" (and damaged) Minikube instance that was present when the VMware image for the Linux environment was built.  This may cause problems. Enter the following command before you start this workshop:
 
 ```
-$ minikube delete
+minikube delete
 ```
 
 Output will be most likely something like this:
@@ -47,7 +47,7 @@ Please be aware that this command will delete any existing Minikube cluster!
 **bwLehrpool has sufficient RAM to increase memory for Minikube**, you can use this command instead:
 
 ```
-$ minikube start --cpus 2 --memory 6144 --driver docker
+minikube start --cpus 2 --memory 6144 --driver docker
 ```
 
 which will assign 6 GB of RAM.

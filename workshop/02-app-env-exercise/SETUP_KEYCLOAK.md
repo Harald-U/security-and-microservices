@@ -26,7 +26,8 @@ kubectl get pods
 It takes some time for the pod to start. Notice that there are two containers in the pod, one for Keycloak itself, the other is the Istio Envoy proxy:
 
 ```sh
-$ kubectl get pod 
+kubectl get pod 
+
 NAME                        READY   STATUS    RESTARTS   AGE
 keycloak-5c7b8b7c4c-l7j4f   2/2     Running   0          3m6s
 ```

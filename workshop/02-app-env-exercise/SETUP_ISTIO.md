@@ -55,10 +55,10 @@ istiod-7c67c6b6c8-dskz6                 1/1     Running   0          49s
 This command enables automatic sidecar injection for the `default` namespace:
 
 ```
-$ kubectl label namespace default istio-injection=enabled	
+kubectl label namespace default istio-injection=enabled	
 ```
 
-Without this setting we will not use Istio although it is installed! 
+> Without this setting we will not use Istio although it is installed! 
 
 
 ### Step 4: Install Kiali
