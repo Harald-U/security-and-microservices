@@ -5,9 +5,9 @@ layout: default
 
 # 1 - Setup the work environment with Minikube
 
-The instructions will work on Linux and macOS, they have not been tested on Windows bt should work, too.
+The instructions will work on Linux and macOS, they have not been tested on Windows but should work, too.
 
-The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms.
+The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms. This workshop has been tested with Minikube version 1.28.0.
 
 ### Step 1: Download the code from this repository
 
@@ -26,7 +26,7 @@ The Docker driver allows you to install Kubernetes into an existing Docker insta
 minikube start --cpus 2 --memory 4096 --driver=docker
 ```
 
-### Step 2 on bwLehrpool
+### Step 2: Start a Minikube "cluster" on bwLehrpool
 
 There may be a "leftover" (and damaged) Minikube instance that was present when the VMware image for the Linux environment was built.  This may cause problems. Enter the following command before you start this workshop:
 

@@ -20,18 +20,18 @@ In the following exercises we will:
 
 ### Step 1: Download and Install Istio
 
-Note: The workshop has been tested with and is written for Istio 1.12.0. 
+Note: The workshop has been tested with and is written for Istio 1.16.1. 
 
 1. Get the Istio code:
 
 	```
-	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.12.0 TARGET_ARCH=x86_64  sh -
+	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.16.1 TARGET_ARCH=x86_64  sh -
 	```
 
 2. Install Istio:
 
     ```
-	$ istio-1.12.0/bin/istioctl install --set profile=demo -y
+	$ istio-1.16.1/bin/istioctl install --set profile=demo -y
     ```
 
 
@@ -65,21 +65,21 @@ kubectl label namespace default istio-injection=enabled
 
 [Kiali](https://kiali.io/) is an observability console for Istio with service mesh configuration and validation capabilities. It helps you understand the structure and health of your service mesh by monitoring traffic flow to infer the topology and report errors. 
 
-In earlier versions of Istio, Kiali and the other telemetry services have been installed by default. This is no longer true with Istio 1.12. Detailled instructions can be found in the [Integrations](https://istio.io/latest/docs/ops/integrations/) section of the Istio documentation.
+In earlier versions of Istio, Kiali and the other telemetry services have been installed by default. This is no longer true with newer versions. Detailled instructions can be found in the [Integrations](https://istio.io/latest/docs/ops/integrations/) section of the Istio documentation.
 
 Kiali requires Prometheus:
 
 ```
-kubectl apply -f istio-1.12.0/samples/addons/prometheus.yaml
+kubectl apply -f istio-1.16.1/samples/addons/prometheus.yaml
 ```
 
 This will install Prometheus into the istio-system namespace.
-This assumes that Istio 1.12.0 was downloaded. You may need to adjust the path accordingly.
+This assumes that Istio 1.16.1 was downloaded. You may need to adjust the path accordingly.
 
 To install Kiali, you need to execute this command:
 
 ```
-kubectl apply -f istio-1.12.0/samples/addons/kiali.yaml
+kubectl apply -f istio-1.16.1/samples/addons/kiali.yaml
 ```
 
 Check with 
