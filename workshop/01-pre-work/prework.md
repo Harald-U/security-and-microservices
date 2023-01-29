@@ -28,23 +28,7 @@ minikube start --cpus 2 --memory 4096 --driver=docker
 
 ### Step 2: Start a Minikube "cluster" on bwLehrpool
 
-There may be a "leftover" (and damaged) Minikube instance that was present when the VMware image for the Linux environment was built.  This may cause problems. Enter the following command before you start this workshop:
-
-```
-minikube delete
-```
-
-Output will be most likely something like this:
-
-```
-🔥  minikube" in docker wird gelöscht...
-🔥  /home/student/.minikube/machines/minikube wird entfernt...
-💀  Removed all traces of the "minikube" cluster.
-```
-
-Please be aware that this command will delete any existing Minikube cluster!
-
-**bwLehrpool has sufficient RAM to increase memory for Minikube**, you can use this command instead:
+bwLehrpool has sufficient RAM to increase memory for Minikube, you can use this command instead:
 
 ```
 minikube start --cpus 2 --memory 6144 --driver docker
