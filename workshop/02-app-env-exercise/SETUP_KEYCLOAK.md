@@ -38,11 +38,11 @@ Continue when both containers are ready.
 
 Open the Keycloak URL in your browser:
 
-```sh
-https://demo.k8s.local/auth
-```
 
-You may need to accept the security risk in your browser, we are using a self-signed certificate!
+[https://demo.k8s.local/auth](https://demo.k8s.local/auth){:target="_blank"}
+
+
+You will have to accept the security risk in your browser, we are using a self-signed certificate!
 
 Note: This URL will work because we created a VirtualService in the previous exercise that maps the '/auth' URI to the Keycloak service.
 
@@ -82,6 +82,26 @@ Try to create an access token:
 ```sh
 curl -d "username=alice" -d "password=alice" -d "grant_type=password" -d "client_id=frontend" --insecure https://demo.k8s.local/auth/realms/quarkus/protocol/openid-connect/token  | sed -n 's|.*"access_token":"\([^"]*\)".*|\1|p'
 ```
+
+Result looks like this:
+
+```
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1909  100  1841  100    68   9792    361 --:--:-- --:--:-- --:--:-- 10154
+eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZklBRE5feHhDSm1Wa1d5Ti1QTlhFRXZNVVdzMnI2OEN4dG1oRUROelhVIn0.
+eyJleHAiOjE2NzUyNjYwMDIsImlhdCI6MTY3NTI2NTcwMiwianRpIjoiZTVkMDZmNWQtZjkxMS00MTQxLTljOTUtOWVhZWM1ZWRkOGNhIiwiaXN
+zIjoiaHR0cHM6Ly9kZW1vLms4cy5sb2NhbC9hdXRoL3JlYWxtcy9xdWFya3VzIiwic3ViIjoiZWI0MTIzYTMtYjcyMi00Nzk4LTlhZjUtODk1N2
+Y4MjM2NTdhIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZnJvbnRlbmQiLCJzZXNzaW9uX3N0YXRlIjoiMjhjNTVhYTAtZGQwMy00M2RhLTkxNTYtZ
+DZlZTNlNWM0ZmQ0IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyInKiciLCJodHRwOi8vbG9jYWxob3N0OjgwODAiLCIqIl0sInJlYWxt
+X2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJ
+lZF91c2VybmFtZSI6ImFsaWNlIn0wtoXsUGsqWxa0M2r5kGAntuyWVLAPYlw4yx7xCEyBzlkN6vJOfBzHBed0YQAnOgr9nhsGh9HiX_yyOAvn8e
+gPlZJw9SSzLiiHNxIDZU85Jsf01ShUZV9QKXjhLxJ49jDldWNdRCZcnYkT7YXaG7jZIPAb_dN8evxtsHA8d2Xw8VM7PZ_XeyC1q5FP9CsENE5l8
+aXFuEVF4pS8rFNhV9RWkT4g0iSku90NEu5EeyjW7rVuEnIHhmjQh9WGOK4o6ICD9nGOuHuCEwPx-oCWtWTYh0ArpkvzfGPBkQkrXlBa8mf6nPs8
+bXtTbty6eCDJukf_53pLwVRSVaivU9x0kANw(base)
+```
+
+Note: The long block of cryptic text is a Jason Web Token (JWT) for user 'alice' created by Keycloak.
 
 ---
 

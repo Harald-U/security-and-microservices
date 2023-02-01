@@ -35,7 +35,7 @@ mTLS is enabled by default for the communication between Envoys **but it is enab
 
 ### TASK 1: Test permissive mode
 
-In this task we access the Web-API service using the services nodeport, the IP address of a worker node, and unencrypted HTTP, effectively bypassing the Istio Ingress This is only possible because Istio is still using mTLS in permissive mode. 
+In this task we access the Web-API service via the IP address of the worker node and the services NodePort using the `minikube service` command which in turn uses unencrypted HTTP traffic, therefore effectively bypassing the Istio Ingress which uses HTTPS. This is only possible because Istio is still using mTLS in permissive mode. 
 
 #### Step 1: Create a access-token
 

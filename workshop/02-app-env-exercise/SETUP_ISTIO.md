@@ -22,6 +22,8 @@ In the following exercises we will:
 
 Note: The workshop has been tested with and is written for Istio 1.16.1. 
 
+Note 2: If you completed the **Istio Handson** workshop recently you should have downloaded Istio 1.16.1 already, skip to step **2. Install Istio** then. 
+
 1. Get the Istio code:
 
 	```

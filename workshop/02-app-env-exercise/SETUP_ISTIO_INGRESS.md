@@ -189,7 +189,7 @@ Check the Istio configuration for namespace: Default.
 
 ![istio config](../../images/kiali-istio-config.png)
 
-Notice the red exclamation mark for the VirtualService. The VirtualService definition references 3 Kubernetes services that do not exist at the moment. these are the warnings you saw previously when appling `istio-ingress-tls.yaml`.
+Notice the warning (yellow exclamation mark) for the VirtualService. The VirtualService definition references 3 Kubernetes services that do not exist at the moment. 
 
 
 ### Step 3: Locally expose the Istio Ingress
@@ -241,7 +241,9 @@ I am not able to test this on Windows, though, so please give this method a try 
 
     The external IP address (used to be `<pending>`) is now: `10.106.56.168`
 
-    Edit your hosts file ([instructions for Windows, Mac, Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/){:target="_blank"}), this requires root rights, and add the IP address and host name, e.g.:
+    Edit your hosts file ([instructions for Windows, Mac, Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/){:target="_blank"}), this requires root rights, and add the IP address and host name. On bwLehrpool you can use `sudo nano /etc/hosts`. 
+    
+    Example: 
 
     ```
     ## Minikube
