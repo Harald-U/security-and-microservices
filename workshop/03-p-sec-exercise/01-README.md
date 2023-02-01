@@ -34,21 +34,11 @@ kubectl apply -f configmap.yaml
 
 ### STEP 2: Now deploy the 3 services:
 
-* Deploy Articles Microservice
+* Deploy Articles and Web-API Microservices and the Web-App [Vue.js](https://vuejs.org/) frontend application
 
     ```sh
     kubectl apply -f articles.yaml
-    ```
-
-* Deploy Web-API Microservice
-
-    ```sh
     kubectl apply -f web-api.yaml
-    ```
-
-* Deploy Web-App [Vue.js](https://vuejs.org/) frontend application
-
-    ```sh
     kubectl apply -f web-app.yaml
     ```
 
@@ -106,9 +96,8 @@ Example output:
 
 * Use following URL:
 
-    ```sh
-    https://demo.k8s.local
-    ```
+    [https://demo.k8s.local](https://demo.k8s.local)
+    
 
 * Login in with `user: alice` and `password: alice`
 
