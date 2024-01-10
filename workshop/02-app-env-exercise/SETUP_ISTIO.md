@@ -81,6 +81,12 @@ Kiali requires Prometheus:
 kubectl apply -f istio-1.20.1/samples/addons/prometheus.yaml
 ```
 
+**On bwLehrpool** use this command instead:
+
+```
+kubectl apply -f /home/student/istio-1.20.1/samples/addons/prometheus.yaml
+```
+
 This will install Prometheus into the istio-system namespace.
 This assumes that Istio 1.20.1 was downloaded. You may need to adjust the path accordingly.
 
@@ -88,6 +94,12 @@ To install Kiali, you need to execute this command:
 
 ```
 kubectl apply -f istio-1.20.1/samples/addons/kiali.yaml
+```
+
+**On bwLehrpool** use this command instead:
+
+```
+kubectl apply -f /home/student/istio-1.20.1/samples/addons/kiali.yaml
 ```
 
 Check with 
