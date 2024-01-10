@@ -22,7 +22,7 @@ We will show you with an example application:
 * How to secure communication between Microservices with Istio and mTLS
 * How to implement authorization and authentication with the Open Source Identity and Access Management system Keycloak and JSON Web Tokens (JWT)
 
-The exercises are based on an example application based on our Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security){:target="_blank"}, build with Quarkus and Microprofile
+The exercises are based on an example application based on our Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security){:target="_blank"}, build with [Quarkus](https://quarkus.io){:target="_blank"} and Eclipse Microprofile.
 
 The following screenshot shows the web application, you have to logon to see the list of articles.
 
@@ -35,12 +35,6 @@ The following diagram shows the architecture of the sample application. There is
 To see the results in the web application, users need to be authenticated and they need to have the role `user`. 
 
 <kbd><img src="images/architecture-diagram.png"/></kbd>
-
-### Estimated time and level
-
-|  Time | Level  |
-| - | - |
-| one hour | beginners |
 
 ### Objectives
 
@@ -78,23 +72,18 @@ The last section shows how to compile and run the application locally:
 
 This workshop has been tested on the following platforms:
 
-* **Minikube**: Version 1.28.0
-* **Istio**: Version 1.16.1 
+* **Minikube**: Version 1.32.0
+* **Istio**: Version 1.20.1 
 
 
 ### Technology Used
 
 * [Microservices architecture](https://en.wikipedia.org/wiki/Microservices){:target="_blank"}
 * [Keycloak](https://www.keycloak.org){:target="_blank"}
-* [Jakarta EE](https://jakarta.ee/){:target="_blank"}
 * [MicroProfile](https://microprofile.io/){:target="_blank"}
-* [Quarkus](https://quarkus.io/ingress){:target="_blank"}
+* [Quarkus](https://quarkus.io){:target="_blank"}
 * [Istio](https://https://istio.io){:target="_blank"}
 * [Vue.js](https://vuejs.org/){:target="_blank"}
-* [git 2.24.1 or higher](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
-* [yarn 1.22.4 or higher](https://yarnpkg.com){:target="_blank"}
-* [Node.js v14.6.0 or higher](https://nodejs.org/en/){:target="_blank"}
-* [Apache Maven 3.6.3](https://maven.apache.org/ref/3.6.3/maven-embedder/cli.html){:target="_blank"}
 
 ### Credits
 
@@ -102,8 +91,3 @@ This workshop has been tested on the following platforms:
 * Harald Uebele
 * [Thomas Südbröcker](https://twitter.com/tsuedbroecker){:target="_blank"}
 
-### Additional resources
-
-[Here](workshop/BLOGS.md) are some blogs that describe how this project has been implemented-
-
-The presentation that goes with this workshop is available [here](images/App-Security-Final-V1-20201006.pdf){:target="_blank"}.

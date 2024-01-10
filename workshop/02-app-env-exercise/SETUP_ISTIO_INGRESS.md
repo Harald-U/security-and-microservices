@@ -241,7 +241,7 @@ I am not able to test this on Windows, though, so please give this method a try 
 
     The external IP address (used to be `<pending>`) is now: `10.106.56.168`
 
-    Edit your hosts file ([instructions for Windows, Mac, Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/){:target="_blank"}), this requires root rights, and add the IP address and host name. On bwLehrpool you can use `sudo nano /etc/hosts`. 
+    Edit your hosts file ([instructions for Windows, Mac, Linux](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/){:target="_blank"}), this requires root rights, and add the IP address **you found in the previous step** and the host name ('demo.k8s.local'). *On bwLehrpool you can use `sudo nano /etc/hosts`*. 
     
     Example: 
 
