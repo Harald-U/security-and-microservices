@@ -5,6 +5,8 @@ layout: default
 
 # 9 - Authorization in Quarkus application
 
+**This is a read-only lab**
+
 Quarkus comes with two great quides that describe how to use Keycloak in web apps and services:
 
 * [Use OpenID Connect to Protect Service Applications](https://quarkus.io/guides/security-openid-connect)

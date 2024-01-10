@@ -22,7 +22,7 @@ In the following exercises we will:
 
 Note: The workshop has been tested with and is written for Istio 1.20.1. 
 
-Note 2: If you completed the **Istio Handson** workshop recently you should have downloaded Istio 1.20.1 already, skip to **2. Install Istio** then. 
+Note 2: If you completed the **Istio Handson** workshop recently or if you are running this workshop on bwLehrpool, you should have downloaded Istio 1.20.1 already, skip to **2. Install Istio** then.  
 
 1. Get the Istio code:
 
@@ -33,8 +33,14 @@ Note 2: If you completed the **Istio Handson** workshop recently you should have
 2. Install Istio:
 
     ```
-	$ istio-1.20.1/bin/istioctl install --set profile=demo -y
+	istio-1.20.1/bin/istioctl install --set profile=demo -y
     ```
+
+	**On bwLehrpool** use this command instead:
+
+	```
+	/home/student/istio-1.20.1/bin/istioctl install --set profile=demo -y
+	```
 
 
 ### Step 2: Check the status of Istio deployment
