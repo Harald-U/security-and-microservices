@@ -60,7 +60,7 @@ As you see in the image below  the `Vuex store` saves `access token`, `id token`
 
 ---
 
-[Related blog post](http://heidloff.net/article/securing-vue-js-applications-keycloak/)
+[Related blog post](http://heidloff.net/article/securing-vue-js-applications-keycloak/){:target="_blank"}
 
 ---
 

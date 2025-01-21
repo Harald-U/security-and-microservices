@@ -5,7 +5,7 @@ layout: default
 
 # Overview
 
-_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/){:target="_blank"}._
+_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/){:target="_blank"}.
 
 _The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs._
 
@@ -72,8 +72,8 @@ The last section shows how to compile and run the application locally:
 
 This workshop has been tested on the following platforms:
 
-* **Minikube**: Version 1.32.0
-* **Istio**: Version 1.20.1 
+* **Minikube**: Version 1.35.0
+* **Istio**: Version 1.24.2 
 
 
 ### Technology Used
@@ -86,6 +86,8 @@ This workshop has been tested on the following platforms:
 * [Vue.js](https://vuejs.org/){:target="_blank"}
 
 ### Credits
+
+The authors of the original IBM workshop are:
 
 * [Niklas Heidloff](https://twitter.com/nheidloff){:target="_blank"}
 * Harald Uebele

@@ -13,7 +13,7 @@ Besides authentication using mTLS, Istio can also provide authorization services
 
 The 'end-user to workload' authentication we handle in our example in the application code itself, you will learn about it in the last section of our workshop (Application security with Keycloak and Quarkus).
 
-In this exercise we will learn how to apply authorization policies to further secure communication within the service mesh, workload to workload. In our example we will use [Kubernetes Service Accounts](https://v1-16.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) to perform the authorization.
+In this exercise we will learn how to apply authorization policies to further secure communication within the service mesh, workload to workload. In our example we will use [Kubernetes Service Accounts](https://v1-16.docs.kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/){:target="_blank"} to perform the authorization.
 
 When you create a pod, if you do not specify a service account, it is automatically assigned the 'default' service account in the same namespace. You can check this for the 'articles' service:
 

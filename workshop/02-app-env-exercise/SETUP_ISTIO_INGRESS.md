@@ -35,9 +35,9 @@ We will later use a Minikube feature to simulate a LoadBalancer (`minikube tunne
 
 Our Minikube cluster doesn't hava a public IP address and you probably don't own an Internet domain and also don't want to pay money to register a domain just for this workshop.
 
-But we can still create a "self-signed" TLS certificate if we want to explore how to create a [secure Istio Ingress](https://istio.io/latest/docs/tasks/traffic-management/ingress/secure-ingress/).
+But we can still create a "self-signed" TLS certificate if we want to explore how to create a [secure Istio Ingress](https://istio.io/latest/docs/tasks/traffic-management/ingress/secure-ingress/){:target="_blank"}.
 
-You need the CLI `openssl` to do so. It should be installed on your Linux or macOS, already. It is not installed by default on Windows, the [OpenSSL Wiki](https://wiki.openssl.org/index.php/Binaries) has multiple sources. If you do not want to install `openssl`, there are ready to use certificates in the `deployments/TLS` directory. 
+You need the CLI `openssl` to do so. It should be installed on your Linux or macOS, already. It is not installed by default on Windows, the [OpenSSL Wiki](https://wiki.openssl.org/index.php/Binaries){:target="_blank"} has multiple sources. If you do not want to install `openssl`, there are ready to use certificates in the `deployments/TLS` directory. 
 
 * Our organisation will be represented by the name **k8s.local**
 * Our Istio Ingress will handle requests for **demo.k8s.local**
@@ -91,7 +91,7 @@ You need the CLI `openssl` to do so. It should be installed on your Linux or mac
 
 ### Step 2: Create an Istio Gateway definition and traffic rules
 
-The file [istio-ingress-tls.yaml](../../deployments/istio-ingress-tls.yaml) contains both definitions.
+The file [istio-ingress-tls.yaml](../../deployments/istio-ingress-tls.yaml){:target="_blank"} contains both definitions.
 
 Gateway:
 
@@ -177,13 +177,13 @@ kubectl apply -f istio-ingress-tls.yaml
 Ignore the warnings, the required services are not installed, yet.
 
 
-Open another terminal session and enter the following command:
+Open another terminal session, change to the istio-1-24-2 directory, and enter the following command:
 
 ```
-kubectl port-forward service/kiali 20001:20001 -n istio-system
+bin/istioctl dashboard kiali
 ```
 
-Then open the Kiali dashboard at [http://localhost:20001/](http://localhost:20001/)
+This will open the Kiali dashboard in your default browser.
 
 Check the Istio configuration for namespace: Default.
 
@@ -196,7 +196,7 @@ Notice the warning (yellow exclamation mark) for the VirtualService. The Virtual
 
 The Istio Gateway and VirtualService definitions can be used with the Istio Ingress NodePort.
 
-But Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access). Istio Ingress service is of type LoadBalancer.
+But Minikube allows to assign a unique IP address to each Kubernetes service of type [LoadBalancer](https://minikube.sigs.k8s.io/docs/handbook/accessing/#loadbalancer-access){:target="_blank"}. Istio Ingress service is of type LoadBalancer.
 
 I am not able to test this on Windows, though, so please give this method a try first. **If**  `minikube tunnel` **fails for you, continue with** [Step 3b: Expose Istio Ingress via NodePort](#with-nodeport).
 

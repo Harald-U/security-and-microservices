@@ -9,8 +9,8 @@ layout: default
 
 Quarkus comes with two great quides that describe how to use Keycloak in web apps and services:
 
-* [Use OpenID Connect to Protect Service Applications](https://quarkus.io/guides/security-openid-connect)
-* [Use OpenID Connect to Protect Web Applications](https://quarkus.io/guides/security-openid-connect-web-authentication)
+* [Use OpenID Connect to Protect Service Applications](https://quarkus.io/guides/security-openid-connect){:target="_blank"}
+* [Use OpenID Connect to Protect Web Applications](https://quarkus.io/guides/security-openid-connect-web-authentication){:target="_blank"}
 * Develop protected Endpoints
 
 This diagram shows the simplified architecture:
@@ -90,4 +90,4 @@ public List<CoreArticle> getArticles(int amount) throws NoConnectivity {
 
 ---
 
-[Related blog post](http://heidloff.net/article/security-quarkus-applications-keycloak)
+[Related blog post](http://heidloff.net/article/security-quarkus-applications-keycloak){:target="_blank"}

@@ -7,10 +7,10 @@ layout: default
 
 To run these optional exercises you need to ensure you have installed the following tools on your local machine and you can run them in your terminal sessions.
 
-* [git 2.24.1 or higher](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [yarn 1.22.4 or higher](https://yarnpkg.com)
-* [Node.js v14.6.0 or higher](https://nodejs.org/en/)
-* [Apache Maven 3.6.3](https://maven.apache.org/ref/3.6.3/maven-embedder/cli.html)
+* [git 2.24.1 or higher](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+* [yarn 1.22.4 or higher](https://yarnpkg.com){:target="_blank"}
+* [Node.js v14.6.0 or higher](https://nodejs.org/en/){:target="_blank"}
+* [Apache Maven 3.6.3](https://maven.apache.org/ref/3.6.3/maven-embedder/cli.html){:target="_blank"}
 * Java 9 or higher
 
 ### Architecture 
@@ -31,7 +31,7 @@ The gif shows the logon to the example web frontend application. This is the sim
  
 ### YouTube video related to the workshop
 
-[![](https://img.youtube.com/vi/Un8n0VMLsCs/0.jpg)](https://www.youtube.com/watch?v=Un8n0VMLsCs "Click play on youtube")
+[![](https://img.youtube.com/vi/Un8n0VMLsCs/0.jpg)](https://www.youtube.com/watch?v=Un8n0VMLsCs "Click play on youtube"){:target="_blank"}
 
 ### Step 1: Clone the project to your local machine
 
