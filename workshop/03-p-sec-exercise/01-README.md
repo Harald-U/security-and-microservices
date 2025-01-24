@@ -96,7 +96,7 @@ Example output:
 
 * Use following URL:
 
-    [https://demo.k8s.local](https://demo.k8s.local)
+    [https://demo.k8s.local](https://demo.k8s.local){:target="_blank"}
     
 
 * Login in with `user: alice` and `password: alice`

@@ -11,6 +11,8 @@ The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target
 
 ### Step 1: Download the code from this repository
 
+On **bwLehrpool** change into the PERSISTENT directory, first!
+
 ```
 git clone https://github.com/Harald-U/security-and-microservices.git
 cd security-and-microservices/deployments/
