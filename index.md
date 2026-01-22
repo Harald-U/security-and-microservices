@@ -72,8 +72,8 @@ The last section shows how to compile and run the application locally:
 
 This workshop has been tested on the following platforms:
 
-* **Minikube**: Version 1.35.0
-* **Istio**: Version 1.24.2 
+* **Minikube**: Version 1.37.0
+* **Istio**: Version 1.28.2 
 
 
 ### Technology Used
