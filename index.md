@@ -5,11 +5,11 @@ layout: default
 
 # Overview
 
-_This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/){:target="_blank"}.
+*This workshop is an adaptation of the IBM Workshop [Get started with security for your Java Microservices application](https://ibm-developer.gitbook.io/get-started-with-security-for-your-java-microservi/){:target="_blank"}.*
 
-_The IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use, they incur costs._
+*The original IBM Workshop depends on preprovisioned Kubernetes clusters on the IBM Cloud based on IBM Cloud Kubernetes Service (IKS) which are not free to use.*
 
-_Instead, this version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/){:target="_blank"} running on your own workstation._
+*Instead, this version of the workshop is based on [Minikube](https://minikube.sigs.k8s.io/docs/){:target="_blank"} running on your own workstation.*
 
 ---
 
@@ -22,7 +22,7 @@ We will show you with an example application:
 * How to secure communication between Microservices with Istio and mTLS
 * How to implement authorization and authentication with the Open Source Identity and Access Management system Keycloak and JSON Web Tokens (JWT)
 
-The exercises are based on an example application based on our Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security){:target="_blank"}, build with [Quarkus](https://quarkus.io){:target="_blank"} and Eclipse Microprofile.
+The exercises are based on an example application based on an IBM Open Source Github project [Cloud Native Starter](https://github.com/IBM/cloud-native-starter/tree/master/security){:target="_blank"}, build with [Quarkus](https://quarkus.io){:target="_blank"} and Eclipse Microprofile.
 
 The following screenshot shows the web application, you have to logon to see the list of articles.
 

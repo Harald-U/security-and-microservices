@@ -99,7 +99,7 @@ Example output:
     [https://demo.k8s.local](https://demo.k8s.local){:target="_blank"}
     
 
-* Login in with `user: alice` and `password: alice`
+* Login in with user: `alice` and password: `alice`
 
   ![](../../images/cns-logon-keycloak.png)
 

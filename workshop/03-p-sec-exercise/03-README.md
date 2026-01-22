@@ -79,7 +79,7 @@ If you test the application in the browser it should work exactly the same as be
 
 ### Step 2: Authorization Policy
 
-First we apply an incomplete authorization policy to the articles service. It looks like this:
+First we apply an **incomplete** authorization policy to the articles service. It looks like this:
 
 ```yaml
 apiVersion: security.istio.io/v1beta1
@@ -95,7 +95,7 @@ spec:
 
 Istio documentation specifies: *If any allow policies are applied to a workload, access to that workload is denied by default, unless explicitly allowed by the rule in the policy.*
 
-We have an "ALLOW" policy but no rule is specified which makes it effectively a "DENY ALL" rule.
+We have an **"ALLOW"** policy but currently no rule is specified which makes it effectively a **"DENY ALL"** rule.
 
 Apply with:
 

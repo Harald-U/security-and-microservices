@@ -20,26 +20,26 @@ In the following exercises we will:
 
 ### Step 1: Download and Install Istio
 
-Note: The workshop has been tested with and is written for Istio 1.24.2. 
+Note: The workshop has been tested with and is written for Istio 1.28.2. 
 
-Note 2: If you completed the **Istio Handson** workshop recently or if you are running this workshop on bwLehrpool, you should have downloaded Istio 1.24.2 already, skip to **2. Install Istio** then.  
+Note 2: If you completed the **Istio Handson** workshop recently, or if you are running this workshop on bwLehrpool, you should have downloaded Istio 1.28.2 already, skip to **2. Install Istio** then.  
 
 1. Get the Istio code:
 
 	```
-	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.24.2 TARGET_ARCH=x86_64  sh -
+	curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.28.2 TARGET_ARCH=x86_64  sh -
 	```
 
 2. Install Istio:
 
     ```
-	istio-1.24.2/bin/istioctl install --set profile=demo -y
+	istio-1.28.2/bin/istioctl install --set profile=demo -y
     ```
 
 	**On bwLehrpool** use this command instead:
 
 	```
-	/home/student/istio-1.24.2/bin/istioctl install --set profile=demo -y
+	istioctl install --set profile=demo -y
 	```
 
 
@@ -78,28 +78,28 @@ In earlier versions of Istio, Kiali and the other telemetry services have been i
 Kiali requires Prometheus:
 
 ```
-kubectl apply -f istio-1.24.2/samples/addons/prometheus.yaml
+kubectl apply -f istio-1.28.2/samples/addons/prometheus.yaml
 ```
 
 **On bwLehrpool** use this command instead:
 
 ```
-kubectl apply -f /home/student/istio-1.24.2/samples/addons/prometheus.yaml
+kubectl apply -f /home/student/istio/samples/addons/prometheus.yaml
 ```
 
 This will install Prometheus into the istio-system namespace.
-This assumes that Istio 1.24.2 was downloaded. You may need to adjust the path accordingly.
+This assumes that Istio 1.28.2 was downloaded. You may need to adjust the path accordingly.
 
 To install Kiali, you need to execute this command:
 
 ```
-kubectl apply -f istio-1.24.2/samples/addons/kiali.yaml
+kubectl apply -f istio-1.28.2/samples/addons/kiali.yaml
 ```
 
 **On bwLehrpool** use this command instead:
 
 ```
-kubectl apply -f /home/student/istio-1.24.2/samples/addons/kiali.yaml
+kubectl apply -f /home/student/istio/samples/addons/kiali.yaml
 ```
 
 Check with 

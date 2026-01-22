@@ -7,7 +7,7 @@ layout: default
 
 The instructions will work on Linux and macOS, they have not been tested on Windows but should work, too.
 
-The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms. This workshop has been tested with Minikube version 1.35.0.
+The [Minikube Getting Started](https://minikube.sigs.k8s.io/docs/start/){:target="_blank"} has detailled instructions on how to install Minikube for the different platforms. This workshop has been tested with Minikube version 1.37.0.
 
 ### Step 1: Download the code from this repository
 

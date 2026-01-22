@@ -177,10 +177,16 @@ kubectl apply -f istio-ingress-tls.yaml
 Ignore the warnings, the required services are not installed, yet.
 
 
-Open another terminal session, change to the istio-1-24-2 directory, and enter the following command:
+Open another terminal session, change to the istio-1.28.2 directory, and enter the following command:
 
 ```
 bin/istioctl dashboard kiali
+```
+
+**On bwLehrpool** use this command instead:
+
+```
+istioctl dashboard kiali
 ```
 
 This will open the Kiali dashboard in your default browser.
